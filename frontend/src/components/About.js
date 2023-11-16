@@ -57,19 +57,19 @@ export default function About() {
 
         <h1 className="text-4xl mb-4">Contact Us</h1>
         <p className="mb-6">
-          Have questions or feedback? We'd love to hear from you. Contact our Developer <a className="text-green-500" href="mailto: sahusiba485@gmail.com">sahusiba485@gmail.com</a>
+          Have questions or feedback? We'd love to hear from you. Contact our Developer <a className="text-green-500" href="https://wa.me/+918433980976?text=Hii%20Shiva!,%20i%27m%20interested%20for%20a%20new%20project.">sahusiba485@gmail.com</a>
         </p>
 
         <h1 className="text-2xl font-">Designed and Developed by</h1>
 
-        <h2 className="text-2xl mb-2" >Sibananda sahu</h2>
+        <h2 className="text-2xl my-2 " >Sibananda sahu</h2>
         <h3>Fullstack MERN Developer</h3>
 
         <p className="my-6">
         A passionate MERN stack developer with a deep appreciation for building robust and scalable web applications. With a foundation in MongoDB, Express.js, React, and Node.js
         </p>
 
-        <p className="mb-6">Connect with sibananda: <a className="underline text-blue-600" href="https://www.linkedin.com/in/sibananda485/">LinkedIn</a> | <a className="underline text-red-600" href="https://github.com/sibananda485"> GitHub</a></p>
+        <p className="mb-6">Connect with sibananda: <a target="_blank" className="underline text-blue-600" href="https://www.linkedin.com/in/sibananda485/">LinkedIn</a> | <a target="_blank" className="underline text-red-600" href="https://github.com/sibananda485"> GitHub</a> | <a className="text-cyan-700 underline" href="https://wa.me/+918433980976?text=Hii%20Shiva!,%20i%27m%20interested%20for%20a%20new%20project.">whatsapp</a> </p>
       </div>
     </>
   );
