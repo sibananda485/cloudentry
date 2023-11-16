@@ -3,16 +3,18 @@ import React, { useEffect, useState } from "react";
 export default function Admin() {
   const [user, setUser] = useState([]);
   const [notes, setNotes] = useState([]);
+  const [name, setName] = useState("");
   async function getUsers() {
     const response = await fetch("https://cloudentry.vercel.app/admin");
     const json = await response.json();
     setUser(json.users);
   }
-  async function handleClick(id) {
+  async function handleClick(id,name) {
 
     const response = await fetch(`https://cloudentry.vercel.app/admin/${id}`);
     const json = await response.json();
     setNotes(json.notes);
+    setName(name)
     console.log(json);
   }
   useEffect(() => {
@@ -21,6 +23,8 @@ export default function Admin() {
 
   return (
     <>
+    <div className="px-3">
+
     <h1 className="text-4xl text-center font-bold text-red-500 py-4 mb-5">Admin</h1>
     <h1 className="text-4xl text-center mb-5">Users</h1>
       <table className="mx-auto">
@@ -32,7 +36,7 @@ export default function Admin() {
         {user.map((value) => {
           return (
             <tr>
-              <td className="cursor-pointer" onClick={()=>{handleClick(value._id)}}>
+              <td className="cursor-pointer" onClick={()=>{handleClick(value._id,value.name)}}>
                 {value.name}
               </td>
               <td>{value.email}</td>
@@ -41,6 +45,7 @@ export default function Admin() {
         })}
       </table>
       <h1 className="text-4xl text-center my-10">Notes</h1>
+        <h1 className="text-2xl text-green-800 text-center my-0">{name}</h1>
       <table className="mx-auto mt-10">
         <thead>
           <td>tag</td>
@@ -60,6 +65,7 @@ export default function Admin() {
           );
         })}
       </table>
+        </div>
     </>
   );
 }
