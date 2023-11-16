@@ -1,4 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+table, th, td{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

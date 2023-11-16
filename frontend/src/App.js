@@ -8,6 +8,7 @@ import SignUp from "./components/SignUp";
 import ToastContext from "./context/AlertContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<h1>Error</h1>} />
           </Routes>
         </BrowserRouter>
